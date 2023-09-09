@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --soft-blue: hsla(215, 51%, 70%,.7);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-hover: hsla(178, 100%, 50%,.6);
+
+    --very-dark-blue-card: hsl(217, 54%, 11%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --very-dark-blue-2: hsl(216, 50%, 16%);
+    
+
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-bolder: 600;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--very-dark-blue-card);
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: .01rem;
+}
+
+.main {
+    height:100%;
+    width: 100%;
+    background-color: var(--very-dark-blue-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: min(90%, 27rem);
+    height: 45rem;
+    background-color: var(--very-dark-blue-2);
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    animation: anim 3s;
+}
+
+.container__image {
+    width: 90%;
+    height: 45%;
+    background-color: red;
+    margin: 0 auto;
+    background-image: url(images/image-equilibrium.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.container__heading {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: var(--weight-bolder);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: white;
+    animation: text 4s;
+}
+
+@media (hover:hover) {
+    .container__heading:hover {
+        color:var(--cyan);
+        cursor: pointer;
+    }
+}
+
+.container__description {
+    font-size: 1.5rem;
+    font-weight: var(--weight-light);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3.5rem;
+    color: var(--soft-blue);
+    animation: text 4s;
+}
+
+.container__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3.5rem;
+    animation: text 4s;
+}
+
+.container__ethereum {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container__horloge {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container__ethereum-p {
+    font-size: 1.3rem;
+    color: var(--cyan);
+    font-weight: var(--weight-bolder);
+    text-transform: uppercase;
+}
+
+.container__time {
+    font-size: 1.4rem;
+    font-weight: var(--weight-normal);
+    color: var(--soft-blue);
+   
+}
+
+.container__profile {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 2px solid var(--very-dark-blue-line);
+    padding-top: 1rem;
+    margin-top: 2.1rem;
+    animation: text 4s;
+}
+
+.container__avatar {
+    max-height: 3rem;
+    max-width: 3rem;
+}
+
+.container__avatar-p {
+   font-size: 1.4rem;
+   font-weight: var(--weight-light);
+   margin-left: 1rem;
+   color: var(--soft-blue);
+}
+
+.container__name {
+    color: var(--white);
+    font-weight: var(--weight-light);
+    color: white;
+}
+
+.container__view {
+    max-width :4rem;
+    max-height: 4rem;
+    visibility: hidden;
+}
+
+@media (hover:hover) {
+    .container__name:hover {
+        color:var(--cyan);
+        cursor: pointer;
+    }
+    .container__image:hover {
+      background-image: linear-gradient(to bottom,var(--cyan-hover) 100%, blue 100%), url(images/image-equilibrium.jpg);
+    }
+    .container__image:hover .container__view {
+        visibility: visible;
+    }
+}
+
+@keyframes anim {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 45rem;
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    html{
+        font-size: 80%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    html{
+        font-size: 50%;
+    }
+    .container__description,.container__info {
+        margin-bottom: 1.2rem;
+    }
+     .container {
+        height: 40rem;
+     }
+     .container__profile {
+        margin-top: 3rem;
+     }
+}
+
+
+ 
+
