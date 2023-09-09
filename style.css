@@ -45,7 +45,7 @@ body {
 
 .container {
     width: min(90%, 27rem);
-    height: 45rem;
+    height: 40rem;
     background-color: var(--very-dark-blue-2);
     padding: 1.5rem 0;
     border-radius: 10px;
@@ -91,7 +91,7 @@ body {
     font-weight: var(--weight-light);
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
     color: var(--soft-blue);
     animation: text 4s;
 }
@@ -102,7 +102,7 @@ body {
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
     animation: text 4s;
 }
 
@@ -139,7 +139,7 @@ body {
     margin: 0 auto;
     border-top: 2px solid var(--very-dark-blue-line);
     padding-top: 1rem;
-    margin-top: 2.1rem;
+    margin-top: 1.1rem;
     animation: text 4s;
 }
 
